@@ -1,0 +1,10 @@
+User-agent: *
+Allow: /
+
+Disallow: /login
+Disallow: /register
+Disallow: /account
+Disallow: /admin-reports
+Disallow: /community
+
+Sitemap: https://hack1-cb0f2.web.app/sitemap.xml

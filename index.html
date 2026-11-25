@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#08111f">
+  <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1">
+  <meta name="author" content="CSS Master">
+  <meta name="language" content="Arabic">
+  <meta name="distribution" content="global">
+  <meta name="format-detection" content="telephone=no">
+  <meta property="og:locale" content="ar_AR">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="CSS Master">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site" content="@CSSMaster">
+  <title>تعلم البرمجة من الصفر | كورسات HTML وCSS وJavaScript</title>
+  <meta name="description" content="تعلم HTML وCSS وJavaScript بالعربي عبر دروس عملية، محررات أكواد، تدريبات ومشاريع تفاعلية من مستوى المبتدئين إلى الاحتراف.">
+  <meta name="keywords" content="تعلم البرمجة من الصفر, كورسات برمجة للمبتدئين, تعلم HTML بالعربي, تعلم CSS بالعربي, تعلم JavaScript بالعربي, تعلم تطوير الويب">
+  <link rel="canonical" href="https://hack1-cb0f2.web.app/">
+  <meta property="og:title" content="تعلم البرمجة من الصفر | كورسات HTML وCSS وJavaScript">
+  <meta property="og:description" content="منصة عربية مجانية لتعلم HTML وCSS وJavaScript بالممارسة والمشاريع التفاعلية.">
+  <meta property="og:url" content="https://hack1-cb0f2.web.app/">
+  <meta property="og:image" content="https://hack1-cb0f2.web.app/assets/reference.png">
+  <meta name="twitter:title" content="تعلم البرمجة من الصفر | CSS Master">
+  <meta name="twitter:description" content="كورسات HTML وCSS وJavaScript بالعربي للمبتدئين والمحترفين.">
+  <meta name="twitter:image" content="https://hack1-cb0f2.web.app/assets/reference.png">
+  <link rel="preload" href="styles.css" as="style">
+  <link rel="stylesheet" href="styles.css">
+  <script type="application/ld+json" id="home-jsonld">
+  {
+    "@context":"https://schema.org",
+    "@graph":[
+      {"@type":"Organization","@id":"https://hack1-cb0f2.web.app/#organization","name":"CSS Master","url":"https://hack1-cb0f2.web.app/","logo":"https://hack1-cb0f2.web.app/assets/reference.png","inLanguage":"ar"},
+      {"@type":"WebSite","@id":"https://hack1-cb0f2.web.app/#website","url":"https://hack1-cb0f2.web.app/","name":"CSS Master","inLanguage":"ar","publisher":{"@id":"https://hack1-cb0f2.web.app/#organization"}},
+      {"@type":"WebPage","@id":"https://hack1-cb0f2.web.app/#webpage","url":"https://hack1-cb0f2.web.app/","name":"تعلم البرمجة من الصفر","inLanguage":"ar","isPartOf":{"@id":"https://hack1-cb0f2.web.app/#website"}}
+    ]
+  }
+  </script>
+</head>
+<body>
+  <noscript>
+    <main>
+      <h1>تعلم البرمجة من الصفر | CSS Master</h1>
+      <p>أكاديميات عربية لتعلم HTML وCSS وJavaScript للمبتدئين والمحترفين.</p>
+      <nav>
+        <a href="#html">HTML Academy</a>
+        <a href="#curriculum">CSS Academy</a>
+        <a href="#javascript">JavaScript Academy</a>
+      </nav>
+    </main>
+  </noscript>
+  <header class="topbar">
+    <button class="icon-btn menu-toggle" id="menuToggle" aria-label="فتح القائمة">☰</button>
+    <a class="brand" href="#home" data-route="home">
+      <span class="brand-mark">3</span>
+      <span>CSS Master</span>
+    </a>
+    <nav class="main-nav" id="mainNav">
+      <a class="nav-link active" href="#home" data-route="home"><span>⌂</span> الرئيسية</a>
+      <a class="nav-link" href="#curriculum" data-route="curriculum"><span>▤</span> المنهج</a>
+      <a class="nav-link" href="#editor" data-route="editor"><span>&lt;/&gt;</span> المحرر</a>
+      <a class="nav-link" href="#exercises" data-route="exercises"><span>⚡</span> التدريبات</a>
+      <a class="nav-link" href="#projects" data-route="projects"><span>◇</span> المشاريع</a>
+      <a class="nav-link" href="#community" data-route="community"><span>●</span> المجتمع</a>
+      <a class="nav-link" href="#quiz" data-route="quiz"><span>✓</span> الاختبارات</a>
+      <a class="nav-link" href="#account" data-route="account"><span>♙</span> حسابي</a>
+    </nav>
+    <div class="top-actions">
+      <div class="language-switcher" id="languageSwitcher" aria-label="اختيار اللغة">
+        <button type="button" data-language="css">CSS</button>
+        <button type="button" data-language="javascript">JS</button>
+        <button type="button" data-language="html">HTML</button>
+      </div>
+      <button class="icon-btn" id="themeToggle" aria-label="تبديل السمة">☼</button>
+      <button class="icon-btn" id="infoBtn" aria-label="معلومات">i</button>
+      <button class="account-btn" data-route="account"><span class="avatar">ح</span><span id="topName">حسابي</span></button>
+    </div>
+  </header>
+
+  <aside class="sidebar" id="sidebar">
+    <div class="sidebar-head">
+      <div>
+        <span class="eyebrow">مسارك التعليمي</span>
+        <strong id="sidebarProgress">0% مكتمل</strong>
+      </div>
+      <button class="icon-btn close-sidebar" id="closeSidebar">×</button>
+    </div>
+    <div class="search-box">
+      <span>⌕</span>
+      <input id="lessonSearch" type="search" placeholder="ابحث عن درس أو خاصية CSS">
+    </div>
+    <div id="lessonTree" class="lesson-tree"></div>
+  </aside>
+
+  <main id="app" class="app"></main>
+
+  <div class="toast" id="toast"></div>
+  <div class="modal-backdrop" id="modalBackdrop">
+    <div class="modal" id="modal"></div>
+  </div>
+
+  <script src="app.js"></script>
+  <script src="seo.js"></script>
+  <script type="module" src="firebase.js"></script>
+</body>
+</html>

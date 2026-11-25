@@ -1,0 +1,92 @@
+{
+  "rules": {
+    "users": {
+      "$uid": {
+        ".read": "auth != null && auth.uid == $uid",
+        ".write": "auth != null && auth.uid == $uid",
+        ".validate": "!newData.hasChild('password') && (!newData.hasChild('uid') || newData.child('uid').val() == $uid)",
+        "role": { ".validate": false },
+        "admin": { ".validate": false },
+        "isAdmin": { ".validate": false },
+        "username": {
+          ".validate": "newData.isString() && newData.val().length >= 1 && newData.val().length <= 100"
+        },
+        "email": {
+          ".validate": "newData.isString()"
+        },
+        "photoURL": {
+          ".validate": "newData.isString()"
+        },
+        "bio": {
+          ".validate": "newData.isString() && newData.val().length <= 500"
+        },
+        "provider": {
+          ".validate": "newData.isString()"
+        },
+        "level": {
+          ".validate": "newData.isNumber() && newData.val() >= 1"
+        },
+        "xp": {
+          ".validate": "newData.isNumber() && newData.val() >= 0"
+        },
+        "completedLessons": { ".validate": "newData.isNumber() && newData.val() >= 0" },
+        "completedProjects": { ".validate": "newData.isNumber() && newData.val() >= 0" },
+        "completedChallenges": { ".validate": "newData.isNumber() && newData.val() >= 0" },
+        "progress": { ".validate": "newData.isNumber() && newData.val() >= 0 && newData.val() <= 100" },
+        "$other": { ".validate": true }
+      }
+    },
+    "reports": {
+      ".read": "auth != null && auth.token.admin === true",
+      ".write": false,
+      "$reportId": {
+        ".validate": "newData.hasChildren(['id','reporterUid','type','reason','status','createdAt'])"
+      }
+    },
+    "community": {
+      "posts": {
+        ".read": "auth != null",
+        ".write": false,
+        "$postId": {
+          ".validate": "newData.hasChildren(['id','authorUid','authorName','content','createdAt'])"
+        }
+      },
+      "comments": {
+        ".read": "auth != null",
+        ".write": false,
+        "$postId": {
+          "$commentId": {
+            ".validate": "newData.hasChildren(['id','authorUid','authorName','content','createdAt'])"
+          }
+        }
+      },
+      "blocks": {
+        "$blockerUid": {
+          ".read": "auth != null && auth.uid == $blockerUid",
+          "$blockedUid": {
+            ".write": "auth != null && auth.uid == $blockerUid",
+            ".validate": "newData.isBoolean()"
+          }
+        }
+      },
+      "conversations": {
+        "$conversationId": {
+          ".read": "auth != null && data.child('members').child(auth.uid).val() == true",
+          ".write": false
+        }
+      },
+      "reports": {
+        ".read": "auth != null && auth.token.admin === true",
+        ".write": false
+      },
+      "rateLimits": {
+        ".read": false,
+        ".write": false
+      },
+      "$other": {
+        ".read": false,
+        ".write": false
+      }
+    }
+  }
+}
